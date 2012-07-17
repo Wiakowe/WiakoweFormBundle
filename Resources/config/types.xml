@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="wiakowe_form_extensions.form.type.choice_with_disabled_options"
+                 class="Wiakowe\FormBundle\Form\Type\ChoiceWithDisabledOptionsType">
+            <tag name="form.type" alias="choice_with_disabled_options" />
+        </service>
+    </services>
+</container>

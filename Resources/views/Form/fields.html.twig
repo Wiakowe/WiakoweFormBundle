@@ -1,0 +1,38 @@
+{% block choice_with_disabled_options_widget %}
+{% spaceless %}
+{% if expanded %}
+    {{ block('choice_widget') }}
+{% else %}
+<select {{ block('widget_attributes') }}{% if multiple %} multiple="multiple"{% endif %}>
+    {% if empty_value is not none %}
+    <option value="">{{ empty_value|trans }}</option>
+    {% endif %}
+    {% if preferred_choices|length > 0 %}
+    {% set options = preferred_choices %}
+    {{ block('widget_choice_with_disabled_options') }}
+    {% if choices|length > 0 and separator is not none %}
+    <option disabled="disabled">{{ separator }}</option>
+    {% endif %}
+    {% endif %}
+    {% set options = choices %}
+    {{ block('widget_choice_with_disabled_options') }}
+</select>
+{% endif %}
+{% endspaceless %}
+{% endblock choice_with_disabled_options_widget %}
+
+{% block widget_choice_with_disabled_options %}
+{% spaceless %}
+{% for choice, label in options %}
+{% if _form_is_choice_group(label) %}
+<optgroup label="{{ choice|trans }}">
+    {% for nestedChoice, nestedLabel in label %}
+    <option value="{{ nestedChoice }}"{% if _form_is_choice_selected(form, nestedChoice) and choice not in disabled_choices %} selected="selected"{% endif %}{% if nestedChoice in disabled_choices %} disabled="disabled"{% endif %}>{{ nestedLabel|trans }}</option>
+    {% endfor %}
+</optgroup>
+{% else %}
+<option value="{{ choice }}"{% if _form_is_choice_selected(form, choice) and choice not in disabled_choices %} selected="selected"{% endif %}{% if choice not in disabled_choices %} disabled="disabled"{% endif %}>{{ label|trans }}</option>
+{% endif %}
+{% endfor %}
+{% endspaceless %}
+{% endblock widget_choice_with_disabled_options %}
