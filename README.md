@@ -1,7 +1,9 @@
 Wiakowe Form Bundle
 ===================
 
-Set of form types which we have ended up needing:
+Set of form types which we have ended up needing.
+
+Travis status: [![Build Status](https://secure.travis-ci.org/Wiakowe/WiakoweFormBundle.png?branch=master)](http://travis-ci.org/Wiakowe/WiakoweFormBundle)
 
 Choice with disabled options
 ----------------------------
