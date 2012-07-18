@@ -31,7 +31,7 @@
     {% endfor %}
 </optgroup>
 {% else %}
-<option value="{{ choice }}"{% if _form_is_choice_selected(form, choice) and choice not in disabled_choices %} selected="selected"{% endif %}{% if choice not in disabled_choices %} disabled="disabled"{% endif %}>{{ label|trans }}</option>
+<option value="{{ choice }}"{% if _form_is_choice_selected(form, choice) and choice not in disabled_choices %} selected="selected"{% endif %}{% if choice in disabled_choices %} disabled="disabled"{% endif %}>{{ label|trans }}</option>
 {% endif %}
 {% endfor %}
 {% endspaceless %}
