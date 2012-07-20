@@ -1,7 +1,7 @@
 <?php
 namespace Wiakowe\FormBundle\Form\Type;
 
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilder;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\Form\FormInterface;
@@ -13,15 +13,13 @@ use Symfony\Component\Form\FormInterface;
  *
  * todo: Add a validator for this type to verify that the option hasn't been selected.
  */
-class ChoiceWithDisabledOptionsType extends ChoiceType
+class ChoiceWithDisabledOptionsType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilder $builder, array $options)
     {
-        parent::buildForm($builder, $options);
-
         $builder->setAttribute('disabled_choices', $options['disabled_choices']);
     }
 
