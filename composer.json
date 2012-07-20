@@ -19,5 +19,10 @@
             "Wiakowe\\FormBundle": ""
         }
     },
-    "target-dir": "Wiakowe/FormBundle"
+    "target-dir": "Wiakowe/FormBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1.0-dev"
+        }
+    }
 }
