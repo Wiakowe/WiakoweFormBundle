@@ -30,7 +30,7 @@ class ChoiceWithDisabledOptionsTypeTest extends \PHPUnit_Framework_TestCase
         $form = $this->factory->create('choice_with_disabled_options');
         $view = $form->createView();
 
-        $this->assertEquals(array(), $view->getVar('disabled_choices'));
+        $this->assertEquals(array(), $view->vars['disabled_choices']);
     }
 
     public function testConfig()
@@ -43,6 +43,6 @@ class ChoiceWithDisabledOptionsTypeTest extends \PHPUnit_Framework_TestCase
 
         $view = $form->createView();
 
-        $this->assertEquals(array(1, 2), $view->getVar('disabled_choices'));
+        $this->assertEquals(array(1, 2), $view->vars['disabled_choices']);
     }
 }
