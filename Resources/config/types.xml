@@ -9,5 +9,10 @@
                  class="Wiakowe\FormBundle\Form\Type\ChoiceWithDisabledOptionsType">
             <tag name="form.type" alias="choice_with_disabled_options" />
         </service>
+
+        <service id="wiakowe_form_extensions.form.type.jquery_minicolors"
+                 class="Wiakowe\FormBundle\Form\Type\JqueryMinicolorsType">
+            <tag name="form.type" alias="jquery_minicolors" />
+        </service>
     </services>
 </container>

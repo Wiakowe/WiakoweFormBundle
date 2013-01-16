@@ -41,3 +41,10 @@
 {% endfor %}
 {% endspaceless %}
 {% endblock choice_with_disabled_options_widget_options %}
+
+{% block jquery_minicolors_widget %}
+    {% spaceless %}
+        {% set type = type|default('minicolors') %}
+        {{ block('form_widget_simple') }}
+    {% endspaceless %}
+{% endblock jquery_minicolors_widget %}

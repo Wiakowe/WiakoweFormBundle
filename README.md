@@ -14,6 +14,7 @@ The type `choice_with_disabled_options` works exactly like the `choice` type, ex
 Example usage:
 
     $formBuilder->add(
+        'field',
         'choice_with_disabled_options',
         array(1 => 'First', 2 => 'Second'),
         array(
@@ -27,6 +28,19 @@ This code will lead, aproximately, to the following HTML:
         <option value="1">First</option>
         <option value="2" disabled="disabled">Second</option>
     </select>
+
+JQuery MiniColors
+-----------------
+
+The JQuery Minicolors type allows adding a color picker to a form. The selected color will be stored as a 6 characters hex
+with a prepended #. For instance: `#ff00ff`.
+
+Example usage:
+
+    $formBuilder->add('field', 'jquery_minicolors');
+
+For this plugin to work properly, it requires that the user has loaded the [JQuery Minicolors](https://github.com/claviska/jquery-miniColors)
+library.
 
 Next steps
 ----------
