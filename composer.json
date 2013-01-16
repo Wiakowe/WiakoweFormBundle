@@ -1,8 +1,8 @@
 {
     "name": "wiakowe/form-bundle",
     "type": "symfony-bundle",
-    "description": "A bundle which contains helper form types which to aid our needs. Right now it contains a type which allows us to disable single options within a select tag.",
-    "tags": ["symfony", "bundle", "form", "choice", "disabled"],
+    "description": "A bundle which contains helper form types to aid our needs: \"choice with disabled options\", \"jquery minicolors colorpicker\".",
+    "tags": ["symfony", "bundle", "form", "choice", "disabled", "colorpicker", "jquery minicolors"],
     "license": "MIT",
     "authors": [
         { "name": "Roger Llopart Pla", "email": "lumbendil@gmail.com" },
