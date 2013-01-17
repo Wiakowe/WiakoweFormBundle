@@ -9,6 +9,13 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
  */
 class JqueryMinicolorsType extends AbstractType
 {
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    {
+        $resolver->setDefaults(array(
+            'compound' => false,
+        ));
+    }
+
     public function getParent()
     {
         return 'field';
